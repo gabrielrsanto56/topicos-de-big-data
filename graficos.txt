@@ -1,0 +1,37 @@
+graficos de acidentes por Trimestre
+
+ax = acidentes_por_trimestre.plot(kind='bar', color='skyblue', figsize=(10,6))
+
+# Adicionar título e rótulos
+plt.title('Acidentes por Trimestre', fontsize=16)
+plt.xlabel('Trimestre', fontsize=12)
+plt.ylabel('Número de Acidentes', fontsize=12)
+
+# Rotacionar os rótulos do eixo x (trimestres) para diagonal
+ax.set_xticklabels(acidentes_por_trimestre.index, rotation=45, ha='right')
+
+# Adicionar os valores em cima de cada barra
+for p in ax.patches:
+    ax.annotate(f'{int(p.get_height())}', 
+                (p.get_x() + p.get_width() / 2., p.get_height()), 
+                ha='center', va='center', fontsize=11, color='black', 
+                xytext=(0, 10), textcoords='offset points')
+
+# Mostrar o gráfico
+plt.tight_layout()  # Ajustar layout para evitar cortes de textos
+plt.show()
+
+acidentes por mes
+# Criar gráfico de barras empilhadas
+acidentes_por_mes.plot(kind='bar', stacked=True, figsize=(10,6), colormap='tab20')
+
+# Adicionar título e rótulos
+plt.title('Acidentes por Mês de Cada Ano', fontsize=16)
+plt.xlabel('Ano', fontsize=12)
+plt.ylabel('Número de Acidentes', fontsize=12)
+
+# Mostrar legenda e gráfico
+plt.legend(title='Mês', bbox_to_anchor=(1.05, 1), loc='upper left')  # Legenda fora do gráfico
+plt.tight_layout()
+plt.show()
+
