@@ -1,0 +1,17 @@
+Objetivos do Projeto:
+Limpeza e tratamento dos dados de acidentes.
+
+Identificação de padrões sazonais (trimestres, dias da semana, horários).
+
+Análise dos fatores que contribuem para os acidentes (condições meteorológicas, tipo de via, tipo de veículo).
+
+Visualização dos dados através de gráficos informativos.
+
+Tecnologias a serem utilizadas:
+Python como Linguagem principal para análise de dados.
+
+biblioteca Pandas para analise de dados
+
+Matplotlib para gerar os gráficos
+
+NumPy para fazer operações matemáticas necessárias
